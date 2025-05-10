@@ -6,19 +6,21 @@ import {
   UserButton,
 } from "@clerk/nextjs";
 
+import { Button } from "@/components/ui/button";
+
 export default function Home() {
   return (
     <div>
       <SignedOut>
         <SignInButton mode="modal">
-          <button className="bg-blue-500 text-white px-4 py-2 rounded">
+          <Button variant={"destructive"} className="mr-2">
             Sign In
-          </button>
+          </Button>
         </SignInButton>
         <SignUpButton mode="modal">
-          <button className="bg-green-500 text-white px-4 py-2 rounded">
+          <Button className="bg-green-500 text-white px-4 py-2 rounded">
             Sign Up
-          </button>
+          </Button>
         </SignUpButton>
       </SignedOut>
       <SignedIn>
